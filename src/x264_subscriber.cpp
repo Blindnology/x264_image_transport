@@ -66,6 +66,7 @@ namespace x264_image_transport {
 		//Set the codec to H264
 		ROS_INFO("VideoOutputContext::initialize : Setting AVCodecs");
 		codecs[0].m_pCodec = avcodec_find_decoder(AV_CODEC_ID_H264);
+		//codecs[0].m_pCodec = avcodec_find_decoder_by_name("mjpeg");
 		codecs[1].m_pCodec = avcodec_find_decoder(AV_CODEC_ID_MPEG4);
 		for(int i=0; i<n;i++){
 			if(codecs[i].m_pCodec==NULL) {
